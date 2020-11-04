@@ -145,7 +145,7 @@ class Input extends React.Component {
           )}
         </Animated.View>
 
-        <Text
+       {errorMessage? <Text
           {...errorProps}
           style={StyleSheet.flatten([
             styles.error(theme),
@@ -158,7 +158,7 @@ class Input extends React.Component {
           ])}
         >
           {errorMessage}
-        </Text>
+        </Text>: null}
       </View>
     );
   }
